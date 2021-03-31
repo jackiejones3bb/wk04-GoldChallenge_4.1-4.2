@@ -16,8 +16,25 @@
 //NOTE: Write your code below and push back to your github branch.  SUBMIT YOUR GITHUB URL IN CANVAS
 //* **************************************************
 
+
+
+class Polygon {
+    constructor(numbers) {
+        this.total = numbers;
+    }
+    perimeter() {
+        return (this.total || []).reduce(function (a, b) {
+            return a + b;
+        })
+    }
+}
+
 // Create a polygon with side lengths 3, 3, 8, and 8
 
-
+let myPolygon = new Polygon ([3, 3, 8, 8])
   
 // Print the perimeter
+console.log(myPolygon.total);
+console.log(myPolygon.perimeter());
+
+

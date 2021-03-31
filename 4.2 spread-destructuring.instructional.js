@@ -11,9 +11,34 @@
 
 let shoppingList = [[ 'eggs', 'milk', 'butter' ], [ 'cleaner', 'trash bags', 'detergent' ], [ 'thank you card', 'pens', 'gift wrapping' ], [ 'shoes', 't-shirt', 'slacks' ]];
 
+const grocery = shoppingList[0];
+const cleaning = shoppingList[1];
+const gifts = shoppingList[2];
+const clothing = shoppingList[3];
+
+const shoppingList2 = [...grocery, ...cleaning, ...gifts, ...clothing];
+console.log(shoppingList2);
+
+
+
+
 let obj = {
 cleaning: [],
 gifts: [],
 clothing: [],
 grocery: []
 };
+
+shoppingList2.map((item, index) => {
+    if(index <= 2) {
+        obj.grocery.push(item)
+    } else if(index >2 && index <=5) {
+        obj.cleaning.push(item)
+    } else if(index >5 && index <=8) {
+        obj.gifts.push(item)
+    } else {
+        obj.clothing.push(item)
+    }
+})
+
+console.log(obj);
